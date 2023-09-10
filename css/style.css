@@ -1,0 +1,776 @@
+/* У нормалізаторі modern-normalize за умовчанням задано глобальний border-box. Отже,
+якщо його підключено до проєкту,
+то у своїх стилях box-sizing можна не вказувати.
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+} */
+h1,
+h2,
+h3,
+p {
+    margin: 0px;
+}
+img {
+    /* прибираємо дефолтні margin-bottom зображенням */
+    display: block;
+    max-width: 100%;
+}
+.container {
+    width: 1158px;   
+    margin: 0 auto;   
+    padding: 0 15px;       
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #434455;
+    background-color: #FFFFFF;
+    max-width: 100%;
+    height: 3300px;
+}
+
+/* приклеєний футер сторінки: 
+/*1. перетворимо body на flex-контейнер*/
+    /* display: flex; */
+/* 2. змінимо напрямок головної осі на вертикальний */
+    /* flex-direction: column; */
+/*3. задамо контейнеру мінім висоту вкладки браузера на екрані= 100% viewport height  */
+    /* min-height: 100vh;   
+} */
+
+/* 4. задамо flex-grow (керує пропорціями елементів один до одного), main займе все вільне місце на головній осі, відсуваючи «футер» у її кінець, вниз. */
+/* main {flex-grow: 1;} */
+
+ul, ol {
+    /* прибираємо дефолтні маркери та відступи спискам */
+    list-style-type: none;
+    margin: 0px;
+    padding-left: 0px;
+} 
+    
+a {text-decoration: none;} /*убрать подчеркивание всем ссылкам*/
+
+h1 {
+    color: #FFFFFF;
+    font-weight: bold; 
+    font-size:56px; 
+    letter-spacing: 0.02em; 
+    line-height:1.07; /*line-height у множник = line-height: 60px;/ font-size: 56px;*/
+}
+h2 {      
+    color:  #2E2F42;    
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.11;     
+    letter-spacing: 0.72px;
+    text-transform: capitalize;
+}
+h3 {
+    color: #2E2F42;            
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.2; /* 120% */
+    letter-spacing: 0.4px;
+}
+.section
+{   padding-top: 120px;
+    padding-bottom: 120px;
+    max-width: 1440px;
+    margin: auto;
+}
+
+/*Page Header*/
+
+.header-page {
+    background-color: #FFF;    
+    /* height: 72px;  */
+    border-bottom: 1px solid #e7e9fc;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+}
+.logo {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;    
+    font-weight: 700;
+    line-height: 1.17;/* 116.667% */
+  /*in em = letter-spacing: 0.54px/ font-size: 18px; = 0.03em */          
+    letter-spacing: 0.03em; 
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #4D5AE5;    
+    /*только для header*/
+    margin-right: 76px;
+    display: flex;
+}
+.word-studio {color: #2E2F42;}
+.site-nav {
+    color:  #2E2F42;
+    font-weight: 500;
+    font-size: 16px; 
+    line-height: 1.5; 
+    letter-spacing: 0.02em; 
+    display:block;
+    position: relative;
+    padding: 24px 0;
+    color: #404bbf;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+#studio::after { 
+    content: '';   
+    width: 48px;
+    height: 4px;       
+    border-radius: 2px;
+    background:  #404BBF;
+    position: absolute;
+    left: 0;
+    bottom: -1px;    
+}
+.site-nav:hover,
+.site-nav:focus {
+    color: #404BBF;
+}
+.address {
+    font-style: normal;
+}
+.address-item {
+    
+    font-size: 16px;
+    line-height: 1.5;    
+    letter-spacing: 0.02em;
+    color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.address-item:hover,
+.address-item:focus {
+    color:  #404BBF;
+}
+.header-page .container {       
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-header {    
+    display: flex;
+    align-items: center;    
+}
+
+.menu-list,
+.address-list {
+    display: flex;
+    gap: 40px;
+}
+
+/* Hero image sect1 */
+
+.hero {
+   background-color: #2E2F42;   
+   padding: 188px 0;
+   background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+   rgba(46, 47, 66, 0.7)),
+   /* путь относительно файла style.scc  */
+   url(../images/hero/people-office.jpg);
+   background-repeat: no-repeat;
+   background-position: center; 
+   background-size: cover;
+   position: relative;
+   
+}
+.hero-title {
+    font-size: 56px; 
+    line-height: 1.07;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 496px;    
+}
+.button-con {    
+    background-color: #4D5AE5;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500; 
+    font-size: 16px; 
+    line-height: 1.5; 
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 48px;    
+    height: 56px;
+    min-width: 169px;
+    border-radius: 4px;            
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    cursor: pointer; /*доданий стиль для визначення типу курсору на кнопці*/
+    border: none; /*для вимкнення стандартного оформлення кнопки*/
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);    
+}
+.button-con:hover,
+.button-con:focus {
+    background-color: #404BBF;
+    cursor: pointer;
+}
+
+
+/* Features sect2 */
+
+.features {
+    /* height: 344px; */
+    /*для визначення відступів всередині секції (можна використовувати аналог padding: 120px 0 120px або padding-top: 120px; та padding-bottom: 120px;*/
+    padding: 120px 0;    
+}
+
+/* =============== Pattern для скрытия заголовка секции ============*/
+/* залишається видним для браузера та ридера */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+/* ============ / Pattern для скрытия заголовка секции ========== */
+
+.features-list {
+    /* Для списку в класі заданий стиль display: flex;
+        для розміщення елементів списку по горизонталі в рядок */
+    display: flex;
+    /* Для списку у класі заданий стиль gap: 24px; для визначення розмірів відступів між елементами списку */
+    gap: 24px;    
+}
+.feature-item {
+    width: calc((100% - 3 * 24px) / 4);
+}
+.bg-icons-features {
+    width: 264px;
+    height: 112px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    border: 1px solid #8E8F99;
+    background: #F4F4FD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* анимация иконки астронавта */
+.astronaut-stars {
+    fill: #4D5AE5;
+    transition: fill 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-item:last-child .bg-icons-features:hover .astronaut-stars,
+.feature-item:last-child .bg-icons-features:focus .astronaut-stars {
+    fill: rgb(252, 141, 7);
+    /* фильтр добавляет тень вокруг самого изображения */
+    filter: drop-shadow(10px -5px 5px rgba(252, 141, 7, 0.3));
+}
+
+.feature-name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    margin-bottom: 8px; /* відступ між заголовком і параграфом */ 
+    text-align: left;
+}
+.feature-description {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+    margin-bottom: 8px; /* відступ між параграфом i списком */
+}
+
+/* Our Team sect3 */
+
+.team {
+    background-color: #F4F4FD;
+    /* height: 732px;      */
+    padding: 120px 0;
+}
+.team-title {
+    font-size: 36px;
+    line-height: 1.11;
+ /*LMS Для заголовка в класі задано стиль text-align: center для вирівнювання тексту */
+    text-align: center; 
+    letter-spacing: 0.02em; 
+    text-transform: capitalize; 
+    color:#2e2f42;
+    margin-bottom: 72px; /*відступів між заголовком та параграфом*/
+}
+.text-center {
+    text-align: center;
+}
+.team-list {
+    display: flex;
+    gap: 24px;   
+}
+.card {
+    background-color: #FFFFFF;    
+    display: inline-flex;    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* ширина карток, або аналоги:
+    width: calc((100% - 72px) / 4);
+    flex-basis: calc((100% - 3 * 24px) / 4);
+    flex-basis: calc((100% - 72px) / 4); */   
+    width: calc((100% - 3 * 24px) / 4);
+    /* для визначення заокруглень внизу блока */
+    border-radius: 0px 0px 4px 4px; 
+    /* тінь у карток    */
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);    
+}
+.card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.card-content {
+    display: flex;
+    flex-direction: column;    
+    align-items: center;    
+    padding: 32px 0;
+}
+.card-list-icons {
+    display: flex;
+    justify-content: center;    
+    gap: 24px;
+}
+.size-icons {
+  width: 40px;
+  height: 40px;  
+}
+.link {
+    width: 100%;
+    height: 100%;
+    background-color: #4D5AE5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+   .link:hover,
+   .link:focus {
+    background-color: #404BBF;
+    /* filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3)); */
+}
+
+.card-icons {    
+    fill:#F4F4FD;
+    
+}
+
+/* Our Portfolio sect4 */
+
+#portfolio {
+    margin: 120px 156px;
+    /* height: 1000px; */
+    display: flex;
+    align-items: center;
+}
+.project-list {
+    /* Make a flex container */
+    display: flex;
+     /* Make a flex container multiline - для переносу елементів списку на новий рядок якщо їм не вистачає місця в попередньому */
+    flex-wrap: wrap;
+/* Для списку в класі заданий стиль column-gap: 24px;
+для визначення горизонтальних відступів між пунктами списку (можна використовувати margin-right: 24px для тега li у класі, для кожного третього li використовуємо (.project-list:nth-child(2n + 1); margin-right: 0;) для обнулення відступів) */
+/* Set gap between rows and columns */
+    column-gap: 24px;
+    row-gap: 48px;
+}    
+.project {   
+    width: calc(100% - 24px*2)/3;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.project:hover,
+.project:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+.project-content {
+    border: 1px solid #e7e9fc;
+    padding: 32px 16px;
+    border-top: none;
+}
+
+.box {
+    position: relative;
+    overflow: hidden;
+}
+.box:hover .overlay {
+    transform: translateY(0);
+    
+}
+.overlay {
+    padding: 40px 32px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: #4D5AE5;
+    color: #F4F4FD;
+    align-items: center;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #2e2f42;
+    /* height: 312px; */
+    /*  відступ всередині секції (аналог padding: 100px 0 100px 
+    або padding-top: 100px; та padding-bottom: 100px; ) */
+    padding: 100px 0;
+    align-items: center;
+    justify-items: center;
+}
+.footer-wrapper {
+    display: flex;
+    align-items: baseline;
+    gap: 120px;
+    
+}
+/* .footer-con-txt {
+    margin-right: 120px;
+} */
+
+ /* only for footer logo */
+.footer .logo {
+    
+   margin-right: 0;
+   display: inline-block;   
+   margin-bottom: 17.5px;
+}
+.footer .word-studio {
+    color: #F4F4FD;
+}
+.footer-txt {    
+   color: #FFFFFF;   
+   display: flex;
+   /* text-align: start ; */
+   max-width: 264px;
+   margin-bottom: 16px;
+}
+.footer-con-icons {
+    display: inline-block;
+    align-items: center;
+    justify-items:left;
+}
+
+.title-con-icons {
+    font-weight: 500;
+    /* margin-bottom: 16px; */
+}
+.footer-con-icons .card-list-icons {
+    gap: 16px;
+}
+.footer-con-icons .link:hover,
+.footer-con-icons .link:focus {
+background-color: #31D0AA;
+}
+
+.subscribe-box {
+    display: flex;
+    gap: 24px;
+}
+.subscribe-box-input {
+   height: 40px; 
+   width: 264px;
+   border: 1px solid #ffffff;
+   background: transparent;
+   font-size: 12px;
+   line-height: 1.5;
+   letter-spacing: 0.04em;
+   padding-left: 16px;
+   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+   border-radius: 4px;
+    color: #ffffff;    
+}
+.subscribe-box-input::placeholder {
+    color: #ffffff;
+}
+
+.subscribe-box-button {
+    min-width: 165px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    background-color: #4D5AE5;    
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+
+    margin-top: 0px;
+    margin-left: 24px;
+    gap:16px;
+    
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);    
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+/*вкл neon теней*/
+    transition:box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-box-button:hover,
+.subscribe-box-button:focus {
+background-color: #404BBF;
+/*вкл neon теней*/
+box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7),
+        1px 2px 4px 0px rgba(0, 255, 255, 0.7),
+        2px 4px 8px 0px rgba(0, 255, 255, 0.7),
+        2px 4px 16px 0px rgba(0, 255, 255, 0.7);
+}
+.subscribe-box-button-icons {
+    margin-left: 16px;
+    fill: rgba(255, 255, 255, 1);
+}
+
+/* ====================  Backdrop  =============================================== */
+
+.backdrop {
+   /* display: flex; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99999;
+    background-color: rgba(46, 47, 66, 0.40);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+/* Warning!!! comment it for use class var.1 ".is-hiden" */
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+ /* var.1  */
+ .is-hidden {
+     opacity: 0;
+     pointer-events: none;
+     visibility: hidden;
+ }
+ /* var.2  */
+ .is-open {
+     opacity: 1;
+     pointer-events: auto;
+     visibility: visible;
+ }
+/* ====================  / Backdrop ==================================== */
+
+/* ================= Modal window ===================================== */
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 408px;
+    min-height: 584px;
+    border-radius: 4px;
+    padding: 72px 24px 24px 24px;
+    background: #FCFCFC;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);      
+}
+
+.modal-btn-close {
+    line-height: 0; /*скидання дефолт line-height кнопки, як що нема тексту*/
+    padding: 0;
+    cursor: pointer;
+    position:absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;    
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    border-radius: 50%;
+    fill: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);    
+    /* transition:fill 250ms cubic-bezier(0.4, 0, 0.2, 1);       */
+    }
+
+.modal-btn-close:hover,
+.modal-btn-close:focus {
+    /* background-color: #404BBF; */
+    background-color: #404bbf;    
+    border:none;
+    fill: #ffffff
+}
+.icon-close {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #2E2F42;
+    margin-bottom: 16px;
+}
+.form-field {
+    margin-bottom: 8px;
+}
+.field-label {
+    font-size: 12px;
+    line-height: 1.17;  /* 116.667% */
+    letter-spacing: 0.04em;
+    color: var(--LIGHT-SLATE, #8e8f99);
+    /* щоб задавти відступи label в блоковий елемент */
+    display: block;
+    margin-bottom: 4px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;   
+}
+.field-input-container {   
+    position: relative;
+}    
+.field-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    background-color: transparent;
+    /* отступ для контента */
+    padding-left: 38px;
+    /* сброс дефолт стиль контура у элемента */
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.field-input:focus {
+    border-color: #4D5AE5;
+}
+.field-input-icon {
+    position:absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* + селектор соседа слева, если тег не вложен в другой */
+.field-input:focus + .field-input-icon {
+    fill: #4D5AE5;    
+}
+.form-textarea {
+    margin-bottom: 16px;
+}
+.field-textarea {
+    width: 100%;
+    height: 120px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    padding: 8px 16px;
+    background-color: transparent;
+    color: rgba(46, 47, 66, 0.4);
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;    
+    outline: transparent;
+    resize: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.field-textarea:focus {
+    border-color: #4D5AE5;
+}
+.form-chekbox-container {
+    margin-bottom: 24px;
+}
+.form-chekbox-label {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: var(--LIGHT-SLATE, #8e8f99);
+}
+.form-checkbox-custom {
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+    margin-right: 8px;    
+}
+
+/*или .chekbox-input:checked+.form-chekbox-label .form-checkbox-custom */
+.chekbox-input:checked + .form-chekbox-label > .form-checkbox-custom {
+    background-color: #404bbf;
+    border: none;
+    fill:#F4F4FD;
+}
+/* имитация focus на custom  */
+.chekbox-input:focus +.form-chekbox-label>.form-checkbox-custom {
+    
+    border-color: #4D5AE5;
+    
+}
+
+.form-checkbox-link {
+    color: #4d5ae5;
+    text-decoration: underline;
+}
+.form-send-btn {
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #4D5AE5;
+    /* background: var(--IRIS, #4D5AE5); */
+    border: none;
+    border-radius: 4px;    
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-send-btn:hover,
+.form-send-btn:focus {
+    background-color: #404BBF;
+}
