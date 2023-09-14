@@ -27,7 +27,10 @@
         <nav class="nav-header">
           <a href="./index.html" class="logo"
             >Web
-            <span class="word-studio">&nbsp;Studio</span>
+            <span class="word-studio">
+              <!-- &nbsp; "non-breaking space- пробіл у тексті"-->
+              Studio</span
+            >
           </a>
           <ul class="menu-list">
             <li>
@@ -55,6 +58,11 @@
             </li>
           </ul>
         </address>
+        <button type="button" class="button-burger-menu">
+          <svg width="24" height="24" class="button-burger-menu-icons">
+            <use href="./images/icons.svg#icon-burger-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -556,7 +564,7 @@
 
     <!-- for close/open Backdrop add/delete one of classes:
        is-hidde, is-open -->
-    <div class="backdrop is-open">
+    <div class="backdrop">
       <div class="modal">
         <button class="modal-btn-close" type="button">
           <svg
@@ -668,6 +676,48 @@
           <button class="form-send-btn" type="submit">Send</button>
         </form>
       </div>
+    </div>
+
+    <!-- Mobile menu -->
+
+    <div class="mobile-menu">
+      <button class="modal-btn-close" type="button">
+        <svg
+          width="8"
+          height="8"
+          class="icon-close"
+          aria-label="modal close icon"
+        >
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <nav class="nav-header">
+        <ul class="menu-list">
+          <li>
+            <a href="./index.html" class="site-nav" id="studio">Studio</a>
+          </li>
+          <li>
+            <a href="#portfolio" class="site-nav">Portfolio</a>
+          </li>
+          <li>
+            <a href="" class="site-nav">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <address class="address">
+        <ul class="address-list">
+          <li>
+            <a href="mailto:info@devstudio.com" class="address-item"
+              >info@devstudio.com</a
+            >
+          </li>
+          <li>
+            <a href="tel:+110001111111" class="address-item"
+              >+11 (000) 111-11-11</a
+            >
+          </li>
+        </ul>
+      </address>
     </div>
   </body>
 </html>
