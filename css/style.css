@@ -1,6 +1,5 @@
 /* У нормалізаторі modern-normalize за умовчанням задано глобальний border-box. Отже,
-якщо його підключено до проєкту,
-то у своїх стилях box-sizing можна не вказувати.
+у своїх стилях box-sizing можна не вказувати.
 *,
 *::before,
 *::after {
@@ -17,11 +16,7 @@ img {
     display: block;
     max-width: 100%;
 }
-.container {
-    width: 1158px;   
-    margin: 0px auto;   
-    padding: 0px 15px;       
-}
+
 
 
 body {
@@ -32,17 +27,23 @@ body {
     height: 3300px;
 }
 
+.container {
+    width: 1158px;   
+    margin: 0px auto;   
+    padding: 0px 15px;       
+}
 /* приклеєний футер сторінки: 
-/*1. перетворимо body на flex-контейнер*/
-    /* display: flex; */
-/* 2. змінимо напрямок головної осі на вертикальний */
-    /* flex-direction: column; */
-/*3. задамо контейнеру мінімальну висоту вкладки браузера на екрані= 100% viewport height  */
-    /* min-height: 100vh;   
-} */
+1. перетворимо body на flex-контейнер
+    body { 
+        display: flex;
+2. змінимо напрямок головної осі на вертикальний
+     flex-direction: column;
+    }
+3. задамо контейнеру мінімальну висоту вкладки браузера на екрані= 100% viewport height 
+   .container {min-height: 100vh;}
+4. задамо flex-grow (керує пропорціями елементів один до одного), main займе все вільне місце на головній осі, відсуваючи «футер» у її кінець, вниз.
+    main {flex-grow: 1;} */
 
-/* 4. задамо flex-grow (керує пропорціями елементів один до одного), main займе все вільне місце на головній осі, відсуваючи «футер» у її кінець, вниз. */
-/* main {flex-grow: 1;} */
 
 ul, ol {
     /* прибираємо дефолтні маркери та відступи спискам */
@@ -177,14 +178,59 @@ h3 {
    padding: 188px 0;
    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
    rgba(46, 47, 66, 0.7)),
-   /* путь относительно файла style.scc  */
-   url(../images/hero/people-office.jpg);
+   url(../images/hero/people-office-mobile.jpg);
    background-repeat: no-repeat;
    background-position: center; 
    background-size: cover;
-   position: relative;
-   
+   position: relative;   
 }
+@media screen and (min-resolution: 192dpi) and (min-width: 320px),
+screen and (min-resolution: 2dppx) and (min-width: 320px),
+screen and (min-device-pixel-ratio: 2) and (min-width: 320px) {
+    .hero {
+        background-image: url(../images/hero/people-office-mobile@2x.jpg);
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .hero {
+            background-image: url(../images/hero/people-office-tablet.jpg);
+        }
+    
+}
+@media screen and (min-resolution: 192dpi) and (min-width: 768px),
+screen and (min-resolution: 2dppx) and (min-width: 768px),
+screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
+    .hero {
+        background-image: url(../images/hero/people-office-tablet@2x.jpg);
+    }
+}
+@media screen and (min-width: 1158px) {
+    .hero {
+        background-image: url(../images/hero/people-office.jpg);
+    }
+
+}
+@media screen and (min-resolution: 192dpi) and (min-width: 1158px),
+screen and (min-resolution: 2dppx) and (min-width: 1158px),
+screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
+    .hero {
+        background-image: url(../images/hero/people-office@2x.jpg);
+    }
+}
+
+/* 2x + */
+/* @media screen and (min-resolution: 192dpi),
+screen and (min-resolution: 2dppx),
+screen and (min-device-pixel-ratio: 2) {
+    .hero {
+    background-image: url(../images/hero/people-office@2x.jpg);
+    }    
+} */
+
+
+
 .hero-title {
     font-size: 56px; 
     line-height: 1.07;
@@ -760,8 +806,7 @@ box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7),
     letter-spacing: 0.04em;
     color: #ffffff;
     cursor: pointer;
-    background-color: #4D5AE5;
-    /* background: var(--IRIS, #4D5AE5); */
+    background-color: #4D5AE5;    
     border: none;
     border-radius: 4px;    
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -776,6 +821,16 @@ box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7),
 }
 
 /* =========== Media ================================== */
+
+/* 2x = 192dpi cross-browser rule*/
+
+@media screen and (min-resolution: 192dpi),
+screen and (min-resolution: 2dppx),
+screen and (min-device-pixel-ratio: 2){
+
+}
+    
+
 
 @media (min-width: 320px) {
     .container {
@@ -802,6 +857,7 @@ box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7),
         display: flex;
         justify-content: center;
         align-items: center;
+        line-height: 0;
     }
 
     .bg-icons-features, 
@@ -888,9 +944,7 @@ box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7),
 .project-list {
     gap: 48px;
 }
-/* .project:nth-last-child() {
-    margin-bottom: 72px;
-} */
+
 footer {
 padding-top: 97.5px;
 padding-bottom: 96px;
