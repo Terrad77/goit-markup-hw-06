@@ -52,11 +52,18 @@
     width: 100%;
     height: 100%;
     background-color: #FFF;
+
     padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
     
     /* opacity: 0;
     visibility: hidden;
     pointer-events: none; */
+}
+
+.mobile-menu-contacts {
+    margin-top: auto;
 }
 .mobile-menu-btn-close {
     height: 24px;
