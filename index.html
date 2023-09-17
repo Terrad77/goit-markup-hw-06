@@ -17,11 +17,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href="./css/index.css" rel="stylesheet" />
     <link href="./css/style.css" rel="stylesheet" />
     <title>Web Studio v5.0</title>
   </head>
   <body>
     <!-- Page Header-->
+
     <header class="header-page">
       <div class="container">
         <nav class="nav-header">
@@ -44,6 +46,14 @@
             </li>
           </ul>
         </nav>
+        <button type="button" class="button-burger-menu">
+          <svg width="24" height="24" class="mobile-menu-open-icon">
+            <use
+              href="./images/icons.svg#icon-burger-menu"
+              aria-label="open burger menu"
+            ></use>
+          </svg>
+        </button>
         <address class="address">
           <ul class="address-list">
             <li>
@@ -58,26 +68,21 @@
             </li>
           </ul>
         </address>
-        <button type="button" class="button-burger-menu">
-          <svg width="24" height="24" class="button-burger-menu-icons">
-            <use href="./images/icons.svg#icon-burger-menu"></use>
-          </svg>
-        </button>
       </div>
     </header>
-    <main>
-      <!-- Hero image sect1-->
+    <!-- <main> -->
+    <!-- Hero image sect1-->
 
-      <section class="hero section">
+    <!-- <section class="hero section">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
           <button type="button" class="button-con">Order Service</button>
         </div>
-      </section>
+      </section> -->
 
-      <!-- Features sect2-->
+    <!-- Features sect2-->
 
-      <section class="features">
+    <!-- <section class="features">
         <div class="container">
           <h2 class="visually-hidden">Features</h2>
           <ul class="features-list">
@@ -131,11 +136,11 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
-      <!-- Our Team sect3-->
+    <!-- Our Team sect3-->
 
-      <section class="team">
+    <!-- <section class="team">
         <div class="container">
           <h2 class="team-title">Our Team</h2>
           <ul class="team-list">
@@ -363,11 +368,11 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
-      <!-- Our Portfolio sect4 -->
+    <!-- Our Portfolio sect4 -->
 
-      <section id="portfolio">
+    <!-- <section id="portfolio">
         <div class="container">
           <h2 class="team-title">Our Portfolio</h2>
           <ul class="project-list">
@@ -560,11 +565,11 @@
           </ul>
         </div>
       </section>
-    </main>
+    </main> -->
 
     <!-- Footer -->
 
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container footer-wrapper">
         <div class="footer-con-txt">
           <a href="./index.html" class="logo"
@@ -634,13 +639,14 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
     <!-- Backdrop -->
 
     <!-- for close/open Backdrop add/delete one of classes:
        is-hidde, is-open -->
-    <div class="backdrop">
+
+    <!-- <div class="backdrop">
       <div class="modal">
         <button class="modal-btn-close" type="button">
           <svg
@@ -722,7 +728,6 @@
               </svg>
             </div>
           </div>
-          <!-- textarea -->
           <div class="form-textarea">
             <label class="field-label" for="user-comment">Comment</label>
             <textarea
@@ -755,23 +760,23 @@
           <button class="form-send-btn" type="submit">Send</button>
         </form>
       </div>
-    </div>
+    </div> -->
 
     <!-- Mobile menu -->
 
-    <div class="mobile-menu is-open">
-      <button class="modal-btn-close" type="button">
+    <div class="mobile-menu container is-open">
+      <button class="mobile-menu-btn-close" type="button">
         <svg
           width="8"
           height="8"
-          class="icon-close"
-          aria-label="modal close icon"
+          class="mobile-menu-icon-close"
+          aria-label="mobile menu close icon"
         >
           <use href="./images/icons.svg#icon-close"></use>
         </svg>
       </button>
-      <nav class="nav-header">
-        <ul class="menu-list">
+      <nav class="mobile-menu-nav">
+        <ul class="mobile-menu-nav-list">
           <li>
             <a href="./index.html" class="site-nav">Studio</a>
           </li>
@@ -783,8 +788,8 @@
           </li>
         </ul>
       </nav>
-      <address class="address">
-        <ul class="address-list">
+      <address class="mobile-menu-address">
+        <ul class="mobile-menu-address-list">
           <li>
             <a href="mailto:info@devstudio.com" class="address-item"
               >info@devstudio.com</a
@@ -797,6 +802,38 @@
           </li>
         </ul>
       </address>
+      <div class="mobile-menu-con-icons">
+        <ul class="mobile-menu-list-icons">
+          <li class="size-icons">
+            <a href="https://www.instagram.com/" target="_blank" class="link">
+              <svg width="24" height="24" class="card-icons">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="size-icons">
+            <a href="https://twitter.com" target="_blank" class="link">
+              <svg width="24" height="24" class="card-icons">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="size-icons">
+            <a href="https://www.facebook.com/" target="_blank" class="link">
+              <svg width="24" height="24" class="card-icons">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="size-icons">
+            <a href="https://www.linkedin.com/" target="_blank" class="link">
+              <svg width="24" height="24" class="card-icons">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>

@@ -1,0 +1,66 @@
+/* modern-normalize задає глобальний border-box
+у стилях box-sizing можна не вказувати.
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+} */
+h1,
+h2,
+h3,
+p {
+    margin: 0px;
+}
+/* прибираємо дефолтні рядкові margin-bottom у зображення */
+img {    
+    display: block;
+    max-width: 100%;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #434455;
+    background-color: #FFFFFF;
+    max-width: 100%;
+    height: 3300px;
+}
+ul,
+ol {
+    /* прибираємо дефолтні маркери та відступи спискам */
+    list-style-type: none;
+    margin: 0px;
+    padding-left: 0px;
+}
+
+/*убрать подчеркивание всем ссылкам*/
+a {
+    text-decoration: none;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 56px;
+    /*letter-spacing у множник = line-height: 1.12px;/ font-size: 56px;*/
+    letter-spacing: 0.02em;
+    line-height: 1.07;
+    /*line-height у множник = line-height: 60px;/ font-size: 56px;*/
+}
+h2 {
+    color: #2E2F42;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    /* letter-spacing: 0.72px / font-size 36px =0.02em*/
+    text-transform: capitalize;
+}
+h3 {
+    color: #2E2F42;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.2;
+    /* = 120% */
+    letter-spacing: 0.02em;
+}

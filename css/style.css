@@ -1,37 +1,4 @@
-/* У нормалізаторі modern-normalize за умовчанням задано глобальний border-box. Отже,
-у своїх стилях box-sizing можна не вказувати.
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-} */
-h1,
-h2,
-h3,
-p {
-    margin: 0px;
-}
-img {
-    /* прибираємо дефолтні рядкові margin-bottom у зображення */
-    display: block;
-    max-width: 100%;
-}
 
-
-
-body {
-    font-family: 'Roboto', sans-serif;
-    color: #434455;
-    background-color: #FFFFFF;
-    max-width: 100%;
-    height: 3300px;
-}
-
-.container {
-    width: 1158px;   
-    margin: 0px auto;   
-    padding: 0px 15px;       
-}
 /* приклеєний футер сторінки: 
 1. перетворимо body на flex-контейнер
     body { 
@@ -44,132 +11,9 @@ body {
 4. задамо flex-grow (керує пропорціями елементів один до одного), main займе все вільне місце на головній осі, відсуваючи «футер» у її кінець, вниз.
     main {flex-grow: 1;} */
 
-
-ul, ol {
-    /* прибираємо дефолтні маркери та відступи спискам */
-    list-style-type: none;
-    margin: 0px;
-    padding-left: 0px;
-} 
-    
-a {text-decoration: none;} /*убрать подчеркивание всем ссылкам*/
-
-h1 {
-    color: #FFFFFF;
-    font-weight: bold; 
-    font-size:56px; 
-    letter-spacing: 0.02em; 
-    line-height:1.07; /*line-height у множник = line-height: 60px;/ font-size: 56px;*/
-}
-h2 {      
-    color:  #2E2F42;    
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1.11;     
-    letter-spacing: 0.02em; 
-    /* letter-spacing: 0.72px / font-size 36px =0.02em*/
-    text-transform: capitalize;
-}
-h3 {
-    color: #2E2F42;            
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.2; /* = 120% */
-    letter-spacing: 0.02em;
-}
-.section
-{   padding-top: 120px;
-    padding-bottom: 120px;
-    max-width: 1440px;
-    margin: auto;
-}
-
 /*Page Header*/
 
-.header-page {
-    background-color: #FFF;    
-    /* height: 72px;  */
-    border-bottom: 1px solid #e7e9fc;
-    display: flex;
-    align-items: center;
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-    position: fixed;
-    width: 100%;
-    z-index: 99999;
-}
-.logo {
-    font-family: 'Raleway', sans-serif;
-    font-size: 18px;    
-    font-weight: 700;
-    line-height: 1.17;/* 116.667% */
-  /*in em = letter-spacing: 0.54px/ font-size: 18px; = 0.03em */          
-    letter-spacing: 0.03em; 
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #4D5AE5;    
-    /*только для header*/
-    margin-right: 76px;
-    display: flex;
-}
-.word-studio {color: #2E2F42;}
-.site-nav {
-    color:  #2E2F42;
-    font-weight: 500;
-    font-size: 16px; 
-    line-height: 1.5; 
-    letter-spacing: 0.02em; 
-    display:block;
-    position: relative;
-    padding: 24px 0;
-    color: #404bbf;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-#studio::after { 
-    content: '';   
-    width: 48px;
-    height: 4px;       
-    border-radius: 2px;
-    background:  #404BBF;
-    position: absolute;
-    left: 0;
-    bottom: -1px;    
-}
-.site-nav:hover,
-.site-nav:focus {
-    color: #404BBF;
-}
-.address {
-    font-style: normal;
-}
-.address-item {
-    
-    font-size: 16px;
-    line-height: 1.5;    
-    letter-spacing: 0.02em;
-    color: #434455;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.address-item:hover,
-.address-item:focus {
-    color:  #404BBF;
-}
-.header-page .container {       
-    display: flex;    
-    justify-content: space-between;
-    align-items: center;
-}
-.nav-header {    
-    display: flex;
-    align-items: center;    
-}
 
-.menu-list,
-.address-list {
-    display: flex;
-    gap: 40px;
-}
 
 /* Hero image sect1 */
 
@@ -276,22 +120,7 @@ screen and (min-device-pixel-ratio: 2) {
     padding: 120px 0;    
 }
 
-/* =============== Pattern для скрытия заголовка секции ============*/
-/* залишається видним для браузера та ридера */
 
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
-/* ============ / Pattern для скрытия заголовка секции ========== */
 
 .features-list {
     /* Для списку в класі заданий стиль display: flex;
@@ -673,7 +502,6 @@ box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7),
 
 .modal-btn-close:hover,
 .modal-btn-close:focus {
-    /* background-color: #404BBF; */
     background-color: #404bbf;    
     border:none;
     fill: #ffffff
@@ -824,13 +652,11 @@ box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7),
 
 /* 2x = 192dpi cross-browser rule*/
 
-@media screen and (min-resolution: 192dpi),
+/* @media screen and (min-resolution: 192dpi),
 screen and (min-resolution: 2dppx),
 screen and (min-device-pixel-ratio: 2){
 
 }
-    
-
 
 @media (min-width: 320px) {
     .container {
@@ -844,36 +670,25 @@ screen and (min-device-pixel-ratio: 2){
          flex-direction: row;
     }
     .logo {
-        margin-top: 17.5px;
-        /* padding-left: 0px; */
+        margin-top: 17.5px;        
         margin-bottom: 17.5px;
     }
-    .button-burger-menu {
-        background-color: transparent;
-        border: none;
-        /* padding-top: 16px;
-        padding-right: 16px;
-        padding-bottom: 16px; */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        line-height: 0;
-    }
+    
 
-    .bg-icons-features, 
-    .menu-list,
-    .address {display: none;}
+    .bg-icons-features {
+        display: none;
+    }
 
     .features,
     .team {
-        padding: 96px 0; /*padding-top: 96px; padding-bottom: 96px*/
+        padding: 96px 0;
     }
 
     .features-list, 
     .project-list {
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 8px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
         }
 
     .feature-item   
@@ -901,14 +716,14 @@ screen and (min-device-pixel-ratio: 2){
         }
 
     .feature-name {
-        text-align: center;
-        margin-bottom: 8px;         
-        font-size: 36px;
+        color: #2E2F42;
+        text-align: center;        
+        font-family: Roboto;
+        font-size: 20px;
         font-style: normal;
-        font-weight: 700;
-        line-height: 1.11; /* 111.111% */
+        font-weight: 500;
+        line-height: 1.20;
         letter-spacing: 0.02em;
-        text-transform: capitalize;
     }
 
     .team-list {
@@ -925,7 +740,6 @@ screen and (min-device-pixel-ratio: 2){
             font-style: normal;
             font-weight: 700;
             line-height: 1.11;
-            /* 111.111% */
             letter-spacing: 0.02em;
             text-transform: capitalize;
             align-items: center;
@@ -971,7 +785,7 @@ padding-bottom: 96px;
 }
 .subscribe-box-button {
     margin-left: 0;
-}
+} */
 
 /* 
 @media (min-width: 768px) {
@@ -981,21 +795,11 @@ padding-bottom: 96px;
     .container {}
 } */
 
-.mobile-menu {
-   position: fixed;
-   top: 0;
-   left: 0;
-   z-index: 999;
-   width: 100%;
-   height: 100%;
-   background-color: rgba(46, 47, 66, 0.4);
-   opacity: 0;
-   visibility: hidden;
-   pointer-events: none; 
-}
+/* 
+
 .mobile-menu.is-open{
     opacity: 1;
     visibility: hidden;
     ointer-events: none;
 
-}
+} */
