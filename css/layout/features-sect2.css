@@ -1,0 +1,116 @@
+/* 0-1157px */
+
+@media screen and (max-width: 1157px) {
+    .bg-icons-features {
+        display: none;
+    }
+}
+
+/* 0-767px */
+
+.features {
+   
+    padding: 96px 0;
+}
+
+.features-list {
+   display: flex;
+   flex-direction: column;
+   gap: 72px;
+}
+
+.feature-item {
+    max-width: 288px;
+}
+
+.feature-name {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;    
+    margin-bottom: 8px;    
+    text-align: center;
+}
+
+.feature-description {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;   
+}
+
+
+
+/* tablet 768px + */
+
+@media screen and (min-width: 768px) {
+    .features {
+            
+        padding: 96px 0;
+    }
+
+    .features-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 72px 24px;
+    }
+    .feature-item {
+        max-width: calc((100% - 24px) / 2);       
+    }
+    .feature-name {
+       text-align: left;
+    }
+}
+
+
+
+/* desktop 1158px + */
+
+@media screen and (min-width: 1158px) {
+    .features {    
+        padding: 120px 0;
+    }
+
+    .bg-icons-features {
+        width: 264px;
+        height: 112px;
+        margin-bottom: 8px;
+        border-radius: 4px;
+        border: 1px solid #8E8F99;
+        background: #F4F4FD;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }   
+
+            /* === анимация иконки астронавта === */
+
+    .astronaut-stars {
+        fill: #4D5AE5;
+    }
+
+    .astronaut-stars {
+        transition: fill 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .feature-item:last-child .bg-icons-features:hover .astronaut-stars,
+    .feature-item:last-child .bg-icons-features:focus .astronaut-stars {
+        fill: rgb(252, 141, 7);
+
+        /* тень вокруг самого изображения */
+        filter: drop-shadow(10px -5px 5px rgba(252, 141, 7, 0.3));
+    }
+            /* ===  /анимация иконки астронавта === */
+
+    .feature-item {
+    
+       width: calc((100% - 3 * 24px) / 4);
+    }
+
+    .feature-name {
+       font-weight: 500;
+       font-size: 20px;
+       line-height: 1.2;
+             
+    }
+
+}

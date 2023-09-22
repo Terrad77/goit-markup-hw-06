@@ -17,266 +17,32 @@
 
 /* Hero image sect1 */
 
-.hero {
-   background-color: #2E2F42;   
-   padding: 188px 0;
-   background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-   rgba(46, 47, 66, 0.7)),
-   url(../images/hero/people-office-mobile.jpg);
-   background-repeat: no-repeat;
-   background-position: center; 
-   background-size: cover;
-   position: relative;   
-}
 
-@media screen and (min-resolution: 192dpi) and (min-width: 320px),
-screen and (min-resolution: 2dppx) and (min-width: 320px),
-screen and (min-device-pixel-ratio: 2) and (min-width: 320px) {
-    .hero {
-        background-image: url(../images/hero/people-office-mobile@2x.jpg);
-    }
-}
-
-
-@media screen and (min-width: 768px) {
-    .hero {
-            background-image: url(../images/hero/people-office-tablet.jpg);
-        }
-    
-}
-@media screen and (min-resolution: 192dpi) and (min-width: 768px),
-screen and (min-resolution: 2dppx) and (min-width: 768px),
-screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
-    .hero {
-        background-image: url(../images/hero/people-office-tablet@2x.jpg);
-    }
-}
-@media screen and (min-width: 1158px) {
-    .hero {
-        background-image: url(../images/hero/people-office.jpg);
-    }
-
-}
-@media screen and (min-resolution: 192dpi) and (min-width: 1158px),
-screen and (min-resolution: 2dppx) and (min-width: 1158px),
-screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
-    .hero {
-        background-image: url(../images/hero/people-office@2x.jpg);
-    }
-}
-
-/* 2x + */
-
-/* @media screen and (min-resolution: 192dpi),
-screen and (min-resolution: 2dppx),
-screen and (min-device-pixel-ratio: 2) {
-    .hero {
-    background-image: url(../images/hero/people-office@2x.jpg);
-    }    
-} 
-*/
-
-
-
-.hero-title {
-    font-size: 56px; 
-    line-height: 1.07;
-    text-align: center;
-    letter-spacing: 0.02em;
-    color: #ffffff;
-    margin-left:auto;
-    margin-right:auto;
-    max-width: 496px;    
-}
-.button-con {    
-    background-color: #4D5AE5;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500; 
-    font-size: 16px; 
-    line-height: 1.5; 
-    letter-spacing: 0.04em;
-    color: #ffffff;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 48px;    
-    height: 56px;
-    min-width: 169px;
-    border-radius: 4px;            
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    cursor: pointer; /*доданий стиль для визначення типу курсору на кнопці*/
-    border: none; /*для вимкнення стандартного оформлення кнопки*/
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);    
-}
-.button-con:hover,
-.button-con:focus {
-    background-color: #404BBF;
-    cursor: pointer;
-}
 
 
 /* Features sect2 */
 
-.features {
-    /* height: 344px; */
-    /*для визначення відступів всередині секції (можна використовувати аналог padding: 120px 0 120px або padding-top: 120px; та padding-bottom: 120px;*/
-    padding: 120px 0;    
-}
 
 
+/* Team sect3 */
 
-.features-list {
-    /* Для списку в класі заданий стиль display: flex;
-        для розміщення елементів списку по горизонталі в рядок */
-    display: flex;
-    /* Для списку у класі заданий стиль gap: 24px; для визначення розмірів відступів між елементами списку */
-    gap: 24px;    
-}
-.feature-item {
-    width: calc((100% - 3 * 24px) / 4);
-}
-.bg-icons-features {
-    width: 264px;
-    height: 112px;
-    margin-bottom: 8px;
-    border-radius: 4px;
-    border: 1px solid #8E8F99;
-    background: #F4F4FD;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-/* анимация иконки астронавта */
-.astronaut-stars {
-    fill: #4D5AE5;
-    transition: fill 500ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.feature-item:last-child .bg-icons-features:hover .astronaut-stars,
-.feature-item:last-child .bg-icons-features:focus .astronaut-stars {
-    fill: rgb(252, 141, 7);
-    /* фильтр добавляет тень вокруг самого изображения */
-    filter: drop-shadow(10px -5px 5px rgba(252, 141, 7, 0.3));
-}
-
-.feature-name {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: #2e2f42;
-    margin-bottom: 8px; /* відступ між заголовком і параграфом */ 
-    text-align: left;
-}
-.feature-description {
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #434455;
-    margin-bottom: 8px; /* відступ між параграфом i списком */
-}
-
-/* Our Team sect3 */
-
-.team {
-    background-color: #F4F4FD;
-    /* height: 732px;      */
-    padding: 120px 0;
-}
-.team-title {
-    font-size: 36px;
-    line-height: 1.11;
- /*LMS Для заголовка в класі задано стиль text-align: center для вирівнювання тексту */
-    text-align: center; 
-    letter-spacing: 0.02em; 
-    text-transform: capitalize; 
-    color:#2e2f42;
-    margin-bottom: 72px; /*відступів між заголовком та параграфом*/
-}
-.text-center {
-    text-align: center;
-}
-.team-list {
-    display: flex;
-    gap: 24px;   
-}
-.card {
-    background-color: #FFFFFF;    
-    display: inline-flex;    
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* ширина карток, або аналоги:
-    width: calc((100% - 72px) / 4);
-    flex-basis: calc((100% - 3 * 24px) / 4);
-    flex-basis: calc((100% - 72px) / 4); */   
-    width: calc((100% - 3 * 24px) / 4);
-    /* для визначення заокруглень внизу блока */
-    border-radius: 0px 0px 4px 4px; 
-    /* тінь у карток    */
-    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
-    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
-    0px 1px 6px 0px rgba(46, 47, 66, 0.08);    
-}
-.card img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-.card-content {
-    display: flex;
-    flex-direction: column;    
-    align-items: center;    
-    padding: 32px 0;
-}
-.card-list-icons {
-    display: flex;
-    justify-content: center;    
-    gap: 24px;
-}
-.size-icons {
-  width: 40px;
-  height: 40px;  
-}
-.link {
-    width: 100%;
-    height: 100%;
-    background-color: #4D5AE5;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-   .link:hover,
-   .link:focus {
-    background-color: #404BBF;
-    /* filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3)); */
-}
-
-.card-icons {    
-    fill:#F4F4FD;
-    
-}
 
 /* Our Portfolio sect4 */
 
-#portfolio {
-    margin: 120px 156px;
-    /* height: 1000px; */
+/* #portfolio {
+    margin: 120px 156px;    
     display: flex;
     align-items: center;
 }
-.project-list {
-    /* Make a flex container */
+.project-list {    
     display: flex;
-     /* Make a flex container multiline - для переносу елементів списку на новий рядок якщо їм не вистачає місця в попередньому */
-    flex-wrap: wrap;
-/* Для списку в класі заданий стиль column-gap: 24px;
-для визначення горизонтальних відступів між пунктами списку (можна використовувати margin-right: 24px для тега li у класі, для кожного третього li використовуємо (.project-list:nth-child(2n + 1); margin-right: 0;) для обнулення відступів) */
-/* Set gap between rows and columns */
-    column-gap: 24px;
+    flex-wrap: wrap; */
+
+    /* === (можна використовувати margin-right: 24px для тега "li" у класі, для обнулення відступів у кожного третього "li" використовуємо: .project-list:nth-child(2n + 1) {
+    margin-right: 0; 
+} =====  */
+        
+    /* column-gap: 24px;
     row-gap: 48px;
 }    
 .project {   
@@ -313,15 +79,12 @@ screen and (min-device-pixel-ratio: 2) {
     background-color: #4D5AE5;
     color: #F4F4FD;
     align-items: center;
-}
+} */
 
 /* Footer */
 
-.footer {
+/* .footer {
     background-color: #2e2f42;
-    /* height: 312px; */
-    /*  відступ всередині секції (аналог padding: 100px 0 100px 
-    або padding-top: 100px; та padding-bottom: 100px; ) */
     padding: 100px 0;
     align-items: center;
     justify-items: center;
@@ -345,7 +108,6 @@ screen and (min-device-pixel-ratio: 2) {
 .footer-txt {    
    color: #FFFFFF;   
    display: flex;
-   /* text-align: start ; */
    max-width: 264px;
    margin-bottom: 16px;
 }
@@ -357,7 +119,7 @@ screen and (min-device-pixel-ratio: 2) {
 
 .title-con-icons {
     font-weight: 500;
-    /* margin-bottom: 16px; */
+    
 }
 .footer-con-icons .card-list-icons {
     gap: 16px;
@@ -410,24 +172,29 @@ background-color: #31D0AA;
     gap:16px;
     
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);    
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+
 /*вкл neon теней*/
-    transition:box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* transition:box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .subscribe-box-button:hover,
 .subscribe-box-button:focus {
 background-color: #404BBF;
-/*вкл neon теней*/
-box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7),
+
+/*== neon тень ===*/
+
+/* box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7),
         1px 2px 4px 0px rgba(0, 255, 255, 0.7),
         2px 4px 8px 0px rgba(0, 255, 255, 0.7),
         2px 4px 16px 0px rgba(0, 255, 255, 0.7);
+        
 }
+
 .subscribe-box-button-icons {
     margin-left: 16px;
     fill: rgba(255, 255, 255, 1);
-}
+} */
 
 /* ====================  Backdrop  =============================================== */
 
@@ -460,10 +227,10 @@ box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7),
      opacity: 1;
      pointer-events: auto;
      visibility: visible;
- }
-/* ====================  / Backdrop ==================================== */
+ } */
+/* ================  / Backdrop ==================================== */
 
-/* ================= Modal window ===================================== */
+/* ============= Modal window ===================================== */
 
 .modal {
     display: flex;
@@ -763,7 +530,7 @@ screen and (min-device-pixel-ratio: 2){
 }
 
 footer {
-padding-top: 97.5px;
+padding-top: 96px;
 padding-bottom: 96px;
 }
    

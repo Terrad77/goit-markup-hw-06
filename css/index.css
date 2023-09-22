@@ -8,3 +8,8 @@
 
 /* LAYOUT */
 @import "./layout/header.css";
+@import "./layout/hero-sect1.css";
+@import "./layout/features-sect2.css";
+@import "./layout/team-sect3.css";
+@import "./layout/portfolio-sect4.css";
+@import "./layout/footer.css";

@@ -17,7 +17,8 @@
         align-items: center;
         padding: 0;
         line-height: 0;
-        cursor: pointer;
+       
+        
     }    
     .mobile-menu-open-icon {
         fill: #2F2F37;
@@ -56,8 +57,7 @@
         justify-content: center;
         align-items: center;
         padding: 0;
-        line-height: 0;
-        cursor: pointer;
+        line-height: 0;        
         position: absolute;
         top: 24px;
         right: 24px;
@@ -137,6 +137,9 @@
     text-transform: uppercase;    
     color: #4D5AE5;
     display: flex;
+    padding: 24px 0;
+    cursor: default;
+    
 }
 .word-studio {
     color: #2E2F42;
@@ -240,11 +243,14 @@
         letter-spacing: 0.02em;
     }
 
-                /* MAIN CSS */
+                
     .header-page {
         display: flex;
         align-items: center;
         
+    }
+    .logo {
+        cursor: pointer;
     }
 
     .site-nav {    
