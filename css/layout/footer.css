@@ -63,14 +63,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Roboto", sans-serif;
+    /* font-family: "Roboto", sans-serif; */
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
     background-color: #4D5AE5;
     color: #ffffff;
-    cursor: pointer;
     border: none;
     border-radius: 4px;
     gap: 16px;
@@ -116,34 +115,15 @@
     }
     
     .footer-wrapper {        
-        align-items: baseline;
-        flex-direction: row;
+        align-items: baseline;        
         gap: 0;
         width: 1158px;    
     }
     .footer-con-txt {
         margin-right: 120px;
-    }
-    .footer .logo {    
-        margin-right: 0;
-        display: inline-block;
-        margin-bottom: 17.5px;
     }    
-        .footer .word-studio {
-            color: #F4F4FD;
-        }
     
-    .footer-txt {
-        color: #FFFFFF;
-        display: flex;            
-        max-width: 264px;
-        margin-bottom: 16px;
-    }
-    
-    .footer-con-icons {
-        display: inline-block;
-        align-items: center;
-        justify-items: left;
+    .footer-con-icons {        
         margin-right: 80px;
     }
     
@@ -159,51 +139,10 @@
     .footer-con-icons .link:focus {
         background-color: #31D0AA;
     }
-    
-    .subscribe-box {
-        display: flex;
-        gap: 24px;
-    }
-    
-    .subscribe-box-input {
-        height: 40px;
-        width: 264px;
-        border: 1px solid #ffffff;
-        background: transparent;
-        font-size: 12px;
-        line-height: 1.5;
-        letter-spacing: 0.04em;
-        padding-left: 16px;
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-        border-radius: 4px;
-        color: #ffffff;
-    }
-    
-    .subscribe-box-input::placeholder {
-        color: #ffffff;
-    }
-    
+      
     .subscribe-box-button {
-        min-width: 165px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: "Roboto", sans-serif;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.04em;
-        background-color: #4D5AE5;
-        color: #ffffff;
-        cursor: pointer;
-        border: none;
-        border-radius: 4px;    
-        margin-top: 0px;
-        margin-left: 24px;
-        gap: 16px;    
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         
     }
     
@@ -212,10 +151,5 @@
         background-color: #404BBF;            
     }
     
-    .subscribe-box-button-icons {
-         margin-left: 16px;
-        fill: rgba(255, 255, 255, 1);
-    }
-
 }
 
