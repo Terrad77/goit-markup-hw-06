@@ -153,7 +153,7 @@
 }
 .modal {
     
-    max-width: 288px;
+    width: 288px;
     border-radius: 4px;
     background: var(--DAIRY, #FCFCFC);
     /* padding: 24px 16px; */
@@ -185,7 +185,7 @@
     }
 
     .modal {
-        max-width: 408px;
+        width: 408px;
     }
 
     .menu-list {
