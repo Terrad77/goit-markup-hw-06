@@ -5,9 +5,9 @@
 }
 .footer-wrapper {
     display: flex;    
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: wrap;    
     gap: 72px;
+    justify-content: center;
 }
 .footer-con-txt {
     display: flex;
@@ -16,14 +16,14 @@
 }
 .footer .logo {   
     padding: 0;
-    margin-bottom: 16px;    
+    margin-bottom: 16px;        
 }
 .footer .word-studio {
     color: #F4F4FD;
 }
 
 .footer-txt {
-    color: #FFFFFF;   
+    color: #FFFFFF;    
 }
 
 .title-con-icons {
@@ -41,7 +41,6 @@
     gap: 16px;
     flex-direction: column;    
     align-items: center;
-
 }
 
 .subscribe-box-input {
@@ -87,18 +86,24 @@
 /* tablet 768px + */
 @media screen and (min-width: 768px) {
     
-    .footer-wrapper {
-
-       display: flex;
-       flex-direction: row;
-       flex-wrap: wrap;
+    .footer-wrapper {       
        gap: 72px 24px;
        width: 584px;
+       justify-content: flex-start;
     }
-    /* .footer-con-subscribe {
-        display: flex;
-        flex-direction: row;
-    } */
+    .footer-con-txt {
+        align-items: start;
+    }
+    .footer-txt {
+        max-width: 264px;
+        text-align: justify;
+    }
+    .subscribe-box {        
+        flex-direction: row;        
+    }
+    .subscribe-box-input {
+        max-width: 264px;
+    }
 
 }
 
@@ -106,27 +111,24 @@
 /* desktop 1158px + */
 @media screen and (min-width: 1158px) {
 
-    /* .footer {
-        background-color: #2e2f42;            
-        padding: 100px 0;
-        align-items: center;
-        justify-items: center;
-    } */
-    
-    .footer-wrapper {
-        display: flex;
-        align-items: baseline;
-        gap: 120px;
-    
+    .footer {        
+        padding: 100px 0;     
     }
     
-    .footer .logo {
-    
+    .footer-wrapper {        
+        align-items: baseline;
+        flex-direction: row;
+        gap: 0;
+        width: 1158px;    
+    }
+    .footer-con-txt {
+        margin-right: 120px;
+    }
+    .footer .logo {    
         margin-right: 0;
         display: inline-block;
         margin-bottom: 17.5px;
-    }
-    
+    }    
         .footer .word-studio {
             color: #F4F4FD;
         }
@@ -142,6 +144,7 @@
         display: inline-block;
         align-items: center;
         justify-items: left;
+        margin-right: 80px;
     }
     
     .title-con-icons {
