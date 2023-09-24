@@ -60,7 +60,7 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 320px) {
 @media screen and (min-width: 768px) {
     .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)), url(/images/hero/people-office-tablet.jpg);
+        rgba(46, 47, 66, 0.7)), url(../../images/hero/people-office-tablet.jpg);
     }
     .hero {        
         padding: 112px 0;
@@ -98,7 +98,7 @@ screen and (min-resolution: 2dppx) and (min-width: 768px),
 screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
     .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)), url(/images/hero/people-office-tablet@2x.jpg);
+        rgba(46, 47, 66, 0.7)), url(../../images/hero/people-office-tablet@2x.jpg);
     }
 
 }
@@ -108,7 +108,7 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
 @media screen and (min-width: 1158px) {
     .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-                rgba(46, 47, 66, 0.7)), url(/images/hero/people-office.jpg);
+                rgba(46, 47, 66, 0.7)), url(../../images/hero/people-office.jpg);
     }
 
     .hero {
@@ -149,7 +149,7 @@ screen and (min-resolution: 2dppx) and (min-width: 1158px),
 screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
     .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-                rgba(46, 47, 66, 0.7)), url(/images/hero/people-office@2x.jpg);
+                rgba(46, 47, 66, 0.7)), url(../../images/hero/people-office@2x.jpg);
     }
 }
 
